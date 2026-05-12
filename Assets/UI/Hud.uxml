@@ -1,0 +1,33 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Hud.uss" />
+    <ui:VisualElement name="hud-root" class="hud-root">
+        <ui:VisualElement name="hud-panel" class="hud-panel">
+            <ui:Label name="module-label" text="Module: —" class="hud-title" />
+            <ui:Label name="mode-label" text="Backend: —" class="hud-title" />
+            <ui:Label name="fps-label" text="FPS: —" class="hud-stat" />
+            <ui:Label name="cpu-label" text="CPU: — ms" class="hud-stat" />
+            <ui:Label name="gpu-label" text="GPU: — ms" class="hud-stat" />
+
+            <ui:VisualElement class="hud-spacer-lg" />
+
+            <ui:VisualElement class="hud-row">
+                <ui:Button name="toggle-mode-button"   text="Toggle Backend [Tab]" class="hud-button hud-button--wide" />
+            </ui:VisualElement>
+            <ui:VisualElement class="hud-row">
+                <ui:Button name="toggle-module-button" text="Toggle Module [M]"    class="hud-button hud-button--wide" />
+            </ui:VisualElement>
+
+            <ui:VisualElement name="cubes-section">
+                <ui:VisualElement class="hud-spacer-lg" />
+                <ui:Label name="spawn-count-label" text="Spawned Cubes: 0" class="hud-stat" />
+                <ui:Label text="Spawn Size" class="hud-subtitle" />
+                <ui:VisualElement class="hud-row">
+                    <ui:Button name="size-decrement-button" text="-1" class="hud-button" />
+                    <ui:Button name="size-increment-button" text="+1" class="hud-button" />
+                    <ui:Button name="size-halve-button"     text="÷2" class="hud-button" />
+                    <ui:Button name="size-double-button"    text="×2" class="hud-button" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
